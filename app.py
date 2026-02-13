@@ -20,7 +20,6 @@ def send_email(receiver, file_path):
         "Hello!\n\nYour mashup has been generated successfully.\nEnjoy your music 🎶"
     )
 
-    # Attach the MP3 file
     with open(file_path, 'rb') as f:
         file_data = f.read()
         file_name = file_path.split("/")[-1]
@@ -32,7 +31,7 @@ def send_email(receiver, file_path):
         filename=file_name
     )
 
-    # Connect to Gmail server
+   
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
         smtp.login(EMAIL, PASSWORD)
         smtp.send_message(msg)
@@ -86,3 +85,4 @@ def generate():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
