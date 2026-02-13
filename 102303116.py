@@ -4,7 +4,7 @@ from moviepy import VideoFileClip
 from pydub import AudioSegment
 
 
-# ✅ Cleans folder before use
+
 def clean_folder(folder):
 
     if not os.path.exists(folder):
@@ -18,7 +18,7 @@ def clean_folder(folder):
             os.remove(file_path)
 
 
-# ✅ Main Mashup Function
+
 def create_mashup(singer, number, duration, output_file):
 
     # Clean folders
@@ -70,4 +70,5 @@ def create_mashup(singer, number, duration, output_file):
 
     final.export(output_file, format="mp3")
 
-    print("✅ Mashup created successfully!")
+    print(" Mashup created successfully!")
+
